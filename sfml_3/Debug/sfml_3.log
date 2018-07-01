@@ -1,0 +1,13 @@
+﻿  AI.cpp
+  Brick.cpp
+  Bullet.cpp
+  Global.cpp
+c:\users\zygel\documents\visual studio 2017\projects\sfml_3\sfml_3\global.cpp(43): warning C4305: =: усечение из "double" в "float"
+  Source.cpp
+c:\users\zygel\documents\visual studio 2017\projects\sfml_3\sfml_3\source.cpp(20): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+c:\users\zygel\documents\visual studio 2017\projects\sfml_3\sfml_3\source.cpp(22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\users\zygel\documents\visual studio 2017\projects\sfml_3\sfml_3\source.cpp(25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  Tank.cpp
+  TankPlayer.cpp
+  Создание кода...
+  sfml_3.vcxproj -> C:\Users\zygel\documents\visual studio 2017\Projects\sfml_3\Debug\sfml_3.exe
