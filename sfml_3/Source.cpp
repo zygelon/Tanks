@@ -4,6 +4,7 @@
 #include "Brick.h"
 #include "AI.h"
 #include "TankPlayer.h"
+#include "SecondPlayer.h"
 
 void GenerateWorld()
 {
@@ -20,11 +21,13 @@ void GenerateWorld()
 	srand(time(0));
 	//new TankPlayer(sf::Vector2f(400.0f, 100.0f));
 	new TankPlayer(sf::Vector2f(rand() % (WINDOW_LENGTH - 150) + 75, rand() % (WINDOW_HEIGHT - 150) + 75));
-	for (int i = 0; i < 8; ++i)
+	new SecondPlayer(sf::Vector2f(rand() % (WINDOW_LENGTH - 150) + 75, rand() % (WINDOW_HEIGHT - 150) + 75));
+	for (int i = 0; i < 1; ++i)
 	{
 		new AI(sf::Vector2f(rand() % (WINDOW_LENGTH - 150) + 75, rand() % (WINDOW_HEIGHT - 150) + 75));
 	}
 }
+
 int main()
 {
 	GenerateWorld();

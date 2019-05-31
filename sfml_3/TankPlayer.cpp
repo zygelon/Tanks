@@ -2,19 +2,19 @@
 
 void TankPlayer::Update(const float& deltaTime)
 {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A) || sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 	{
 		this->Move(deltaTime, sides::Left);
 	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D) || sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 	{
 		this->Move(deltaTime, sides::Right);
 	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) || sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 	{
 		this->Move(deltaTime, sides::Up);
 	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) || sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
 	{
 		this->Move(deltaTime, sides::Down);
 	}

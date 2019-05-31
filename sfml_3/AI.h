@@ -9,11 +9,13 @@ public:
 	AI();
 	AI(sf::Vector2f);
 	~AI();
+
+	void Update(const float &deltaTime);//переопределение апдейта что в танке
 private:
 	sf::Clock clock;//секундомер
 
 	float r;//время как долго наш ИИ будет страдать  
-	void Update(const float &deltaTime);//переопределение апдейта что в танке
+	
 	sides direction;//направление танка
 };
 
