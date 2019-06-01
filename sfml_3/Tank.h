@@ -22,7 +22,7 @@ private:
 	
 	const float speed = 160.0f;
 	const sf::Vector2f startPos = sf::Vector2f(400.0f, 400.0f);
-	sf::Vector2f bodySize=sf::Vector2f(50.0f, 50.0f);
+	const sf::Vector2f bodySize=sf::Vector2f(50.0f, 50.0f);
 	
 	float cooldownTime;
 	sf::Clock cooldown;

@@ -6,7 +6,7 @@
 
 enum class sides { Up, Down, Left, Right };
 enum class Tags{Tank,Brick,Bullet};
-enum class Parties{Good, Evil, Neutral};
+enum class Parties{FPlayer, Evil, Neutral,SPlayer};
 
 class Object
 {

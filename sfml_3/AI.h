@@ -13,9 +13,10 @@ public:
 	void Update(const float &deltaTime);//переопределение апдейта что в танке
 private:
 	sf::Clock clock;//секундомер
-
+	sf::Vector2f lastPosition;
 	float r;//время как долго наш ИИ будет страдать  
 	
+	void GenerMoving();
 	sides direction;//направление танка
 };
 
