@@ -1,8 +1,8 @@
 #include "Object.h"
 
-Object::Object(Tags tag, Parties party)
+Object::Object(Parties party)
 {
-	this->tag = tag;
+	//this->tag = tag;
 	this->party=party;
 	objects.push_front(this);
 }

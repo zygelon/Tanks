@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Tank::Tank(sf::Vector2f pos,Parties party,sf::Color bodyColor,sf ::Color gunColor,const int& hp,const int& damage) : Object(Tags::Tank,party), hp(hp),damage(damage)
+Tank::Tank(sf::Vector2f pos,Parties party,sf::Color bodyColor,sf ::Color gunColor,const int& hp,const int& damage) : Object(party), hp(hp),damage(damage)
 {
 
 
@@ -97,7 +97,7 @@ bool Tank::CanMove(sides direction)
 	float epsilon = 1.0f;
 	for (Object* other : GetObjects())
 	{
-		if (other->GetPosition() == this->GetPosition() || other->GetTag()==Tags::Bullet) continue;
+		if (other->GetPosition() == this->GetPosition() || dynamic_cast<Bullet*>(other)!=nullptr) continue;
 		switch (direction)
 		{
 		case sides::Up:

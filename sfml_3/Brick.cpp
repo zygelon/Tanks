@@ -1,6 +1,6 @@
 #include "Brick.h"
 
-Brick::Brick(sf::Vector2f position) : Object(Tags::Brick)
+Brick::Brick(sf::Vector2f position) : Object()
 {
 	brickTexture.loadFromFile("steel_brick.jpg");
 	brick.setOrigin(brickSize / 2.0f);

@@ -5,7 +5,7 @@
 #include <forward_list>
 
 enum class sides { Up, Down, Left, Right };
-enum class Tags{Tank,Brick,Bullet};
+//enum class Tags{Tank,Brick,Bullet};
 enum class Parties{FPlayer, Evil, Neutral,SPlayer};
 
 class Object
@@ -13,9 +13,9 @@ class Object
 public:
 	friend bool IsCollision(const Object&,const Object&) ;
 	//friend class Global;
-	Object(Tags tag,Parties party=Parties::Neutral);
+	Object(Parties party=Parties::Neutral);
 	virtual ~Object();
-	Tags GetTag() { return tag; }
+	//Tags GetTag() { return tag; }
 	bool IsDead() { return isDead; }
 	static const std::forward_list<Object*>& GetObjects() { return objects; }
 	Parties GetParty() { return party; }
@@ -32,7 +32,7 @@ public:
 private:
 	Parties party;
 	static  std::forward_list<Object*>objects;
-	Tags tag;
+//	Tags tag;
 	bool isDead = false;
 
 protected:

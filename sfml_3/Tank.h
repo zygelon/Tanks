@@ -15,6 +15,8 @@ public:
 	void Fire();
 	virtual void Update(const float &deltaTime);
 	
+	
+
 	//int GetDamage() { return damage; }
 	void TakeDamage(const int& damage);
 

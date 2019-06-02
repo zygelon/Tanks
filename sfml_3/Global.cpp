@@ -22,17 +22,17 @@ void Global::Update()
 		{
 			if (IsCollision(**i, **j))
 			{
-				Tags firTag = (*i)->GetTag(), secTag = (*j)->GetTag();
-				if (firTag == Tags::Bullet && secTag == Tags::Tank) {
+				//Tags firTag = (*i)->GetTag(), secTag = (*j)->GetTag();
+				if (dynamic_cast<Bullet*>(*i) != nullptr && dynamic_cast<Tank*>(*j) != nullptr) {
 					swap(i, j);
-					swap(firTag, secTag);
+					//swap(firTag, secTag);
 				}
 
-				if (firTag == Tags::Bullet && secTag == Tags::Bullet) {
+				if (dynamic_cast<Bullet*>(*i) != nullptr && dynamic_cast<Bullet*>(*j) != nullptr) {
 					(*i)->MakeDead(); (*j)->MakeDead();
 				}
 
-				else if (firTag == Tags::Tank && secTag == Tags::Bullet) {
+				else if (dynamic_cast<Tank*>(*i) != nullptr && dynamic_cast<Bullet*>(*j)!=nullptr) {
 					(*j)->MakeDead();
 					if ((*i)->GetParty() != (*j)->GetParty()) dynamic_cast<Tank*>(*i)->TakeDamage(dynamic_cast<Bullet*>(*j)->GetDamage());
 				}

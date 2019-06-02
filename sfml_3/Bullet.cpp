@@ -1,7 +1,7 @@
 #include "Bullet.h"
 
 
-Bullet::Bullet(sf::Vector2f position, sides direction,Parties party,const int& damage) : Object(Tags::Bullet,party),damage(damage)
+Bullet::Bullet(sf::Vector2f position, sides direction,Parties party,const int& damage) : Object(party),damage(damage)
 {
 	/*global = Global::Access();
 	global->AddBullet(this);*/
