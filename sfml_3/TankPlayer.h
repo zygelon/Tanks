@@ -1,7 +1,7 @@
 #pragma once
 #include "Tank.h"
 #include <iostream>
-class TankPlayer : Tank
+class TankPlayer : public Tank
 {
 public:
 	TankPlayer() : TankPlayer(sf::Vector2f(400.0f, 400.0f)) {}//просто случайные числа

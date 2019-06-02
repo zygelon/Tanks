@@ -1,7 +1,8 @@
 #pragma once
 #include "SFML\Graphics.hpp"
 
-
+const int WINDOW_LENGTH = 1200;
+const int WINDOW_HEIGHT = 800;
 
 inline float abs(const sf::Vector2f& a)
 {

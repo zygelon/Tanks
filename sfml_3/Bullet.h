@@ -2,21 +2,24 @@
 #include <iostream>
 #include <SFML\Graphics.hpp>
 #include "myFunc.h"
-#include "Global.h"
+
 #include "Object.h"
 
-class Bullet : Object
+
+class Bullet : public Object
 {
 public:
-	Bullet(sf::Vector2f position, sides,Parties);
+	Bullet(sf::Vector2f position, sides,Parties,const int& damage);
 	~Bullet();
 	const sf::Vector2f& GetSize() const { return bulletSize; }
 	const sf::Vector2f& GetPosition() const { return bullet.getPosition(); }
 	void Update(const float&);
+	int GetDamage() const { return damage; }
 	bool IsOutOfRange();
 	void Draw(sf::RenderWindow& window);
 private:
-	//Global * global;
+	int damage;
+
 	sides direction;
 	sf::RectangleShape bullet;
 

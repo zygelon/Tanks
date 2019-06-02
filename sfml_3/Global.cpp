@@ -1,4 +1,6 @@
 #include "Global.h"
+#include "Tank.h"
+
 
 Global::Global(){
 }
@@ -32,7 +34,7 @@ void Global::Update()
 
 				else if (firTag == Tags::Tank && secTag == Tags::Bullet) {
 					(*j)->MakeDead();
-					if ((*i)->GetParty() != (*j)->GetParty()) (*i)->MakeDead();
+					if ((*i)->GetParty() != (*j)->GetParty()) dynamic_cast<Tank*>(*i)->TakeDamage(dynamic_cast<Bullet*>(*j)->GetDamage());
 				}
 			}
 		}

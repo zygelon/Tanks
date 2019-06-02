@@ -27,6 +27,8 @@ public:
 	virtual void Draw(sf::RenderWindow &window) = 0;
 	void MakeDead() { if(!isDead) isDead = true; }
 
+	//virtual void TakeDamage() {};
+	//virtual int GetDamage() { return 0; };
 private:
 	Parties party;
 	static  std::forward_list<Object*>objects;

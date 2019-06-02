@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Tank::Tank(sf::Vector2f pos,Parties party,sf::Color bodyColor,sf ::Color gunColor) : Object(Tags::Tank,party)
+Tank::Tank(sf::Vector2f pos,Parties party,sf::Color bodyColor,sf ::Color gunColor,const int& hp,const int& damage) : Object(Tags::Tank,party), hp(hp),damage(damage)
 {
 
 
@@ -72,7 +72,7 @@ void Tank::Fire()
 {
 	if (cooldown.getElapsedTime().asSeconds() >= cooldownTime)
 	{
-		new Bullet(GetPosition(), GetDirection(),this->GetParty());
+		new Bullet(GetPosition(), GetDirection(),this->GetParty(),damage);
 		cooldown.restart();
 	}
 }
@@ -83,6 +83,13 @@ void Tank::Update(const float &deltaTime)
 	//body.setFillColor(sf::Color::Black);
 	//bodySize = sf::Vector2f(rand() % 100 + 5,rand() % 100 + 50);
 	Fire();
+}
+
+
+void Tank::TakeDamage(const int& damage)
+{
+	hp -= damage;
+	if (hp < 0) MakeDead();
 }
 
 bool Tank::CanMove(sides direction)

@@ -4,10 +4,10 @@
 #include "Object.h"
 
 
-class Tank : Object
+class Tank :public Object
 {
 public:
-	Tank(sf::Vector2f pos, Parties party= Parties::Neutral,sf::Color bodyColor=sf::Color::Green,sf ::Color gunColor=sf::Color::Red);
+	Tank(sf::Vector2f pos, Parties party= Parties::Neutral,sf::Color bodyColor=sf::Color::Green,sf ::Color gunColor=sf::Color::Red, const int& hp=90, const int& damage = 30);
 	Tank();
 	virtual ~Tank();
 	void Draw(sf::RenderWindow &window);
@@ -15,9 +15,16 @@ public:
 	void Fire();
 	virtual void Update(const float &deltaTime);
 	
+	//int GetDamage() { return damage; }
+	void TakeDamage(const int& damage);
+
 	const sf::Vector2f& GetSize() const { return bodySize; }
 	const sf::Vector2f& GetPosition() const { return body.getPosition(); };
 private:
+
+	int hp;
+	int damage;
+
 	sides direction;
 	
 	const float speed = 160.0f;

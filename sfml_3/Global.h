@@ -5,8 +5,7 @@
 #include "myFunc.h"
 using namespace std;
 
-const int WINDOW_LENGTH = 1200;
-const int WINDOW_HEIGHT = 800;
+
 class Global
 {
 public:
