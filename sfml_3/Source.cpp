@@ -1,5 +1,7 @@
+#include <gtest/gtest.h>
 #include <SFML\Graphics.hpp>
 #include "WorldGeneration.h"
+
 //void GenerateWorld()
 //{
 //	for (float i = 25.0f; i < WINDOW_LENGTH; i += 50.0f)//50.0f размер блока
@@ -22,12 +24,13 @@
 //	}
 //}
 
-int main()
+int main(int argc, char** argv)
 {
+	
 	WorldGeneration::GenerateSingleGame();
 	sf::RenderWindow window(sf::VideoMode(WINDOW_LENGTH,WINDOW_HEIGHT), "tanks",sf::Style::Close);
 	//new Tank(sf::Vector2f(100.0f, 100.0f));
-	Global *global = Global::Access();
+	Global *global = Global::Access(); 
 	while (window.isOpen())
 	{
 		sf::Event ev;
