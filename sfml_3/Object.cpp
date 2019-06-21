@@ -22,7 +22,7 @@ void Object::DestroyDeadObjects()
 		if (next == Object::GetObjects().end()) break;
 		if ((*next)->IsDead())
 		{
-			(*next)->~Object();
+			delete next;
 			objects.erase_after(i);
 			continue;
 		}
